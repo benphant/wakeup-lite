@@ -1,0 +1,5 @@
+build/
+Distribution/
+.DS_Store
+*.xcuserstate
+xcuserdata/

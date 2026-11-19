@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0"><dict>
+<key>Label</key><string>org.awakelite.app.LidHelper</string>
+<key>BundleProgram</key><string>Contents/MacOS/AwakeLiteLidHelper</string>
+<key>MachServices</key><dict><key>org.awakelite.app.LidHelper</key><true/></dict>
+<key>RunAtLoad</key><true/>
+<key>KeepAlive</key><dict><key>SuccessfulExit</key><false/></dict>
+<key>AssociatedBundleIdentifiers</key><array><string>org.awakelite.app</string></array>
+<key>ProcessType</key><string>Background</string>
+</dict></plist>
