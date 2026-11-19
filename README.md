@@ -10,23 +10,11 @@
 
 Left-click the menu bar icon to toggle. Right-click for the menu. Closing the window keeps the current session running. Turning the main switch off or quitting releases the app's wakefulness request.
 
-## Build and run
+## Download
 
-Requires macOS 26 or later, Xcode with the macOS 26 SDK or later, and Python 3. Open `AwakeLite.xcodeproj` to build and preview in Xcode. Build and run the self-checks from the terminal with:
+Get the DMG from [GitHub Releases](https://github.com/benphant/wakeup-lite/releases/latest). Requires macOS 26 or later. The disk image contains builds for Apple silicon and Intel. Drag the app into Applications and open it there.
 
-```sh
-./Scripts/build.sh
-```
-
-Lid control needs the app and its bundled helper signed by the same Apple development team. Set the team for both targets in Xcode, or use:
-
-```sh
-AWAKE_LITE_TEAM=YOUR_TEAM_ID ./Scripts/build.sh
-```
-
-Move the signed app to Applications. In wakeup-lite, click **设置合盖辅助服务** (Set up lid helper), follow the macOS approval prompt, then turn on the first switch. The current interface is in Simplified Chinese. The helper records the previous sleep setting before taking control and restores it when the session ends or its connection times out. Leave room for ventilation when running a closed Mac.
-
-The source release builds for Apple silicon and Intel. Hardware validation has focused on Apple silicon. To make a local DMG, run `AWAKE_LITE_TEAM=YOUR_TEAM_ID ./Scripts/package.sh`. The generated DMG is not notarized by default.
+To browse or build the source, open `AwakeLite.xcodeproj` in Xcode.
 
 ## 中文
 
@@ -36,7 +24,7 @@ The source release builds for Apple silicon and Intel. Hardware validation has f
 2. **合盖后保持内建屏幕常亮**。只有系统仍让内屏在线、且它是唯一在线屏幕时，应用才请求常亮。内屏被系统关掉时会显示不可用。
 3. **低电量时自动停止**。仅使用电池且电量低于 10% 时结束。
 
-需要 **macOS 26 或以上**。用 Xcode 打开 `AwakeLite.xcodeproj`，为主程序和辅助进程配置同一个 Apple 开发团队。也可运行 `AWAKE_LITE_TEAM=你的团队ID ./Scripts/build.sh`。把构建好的应用放入「应用程序」，首次点击「设置合盖辅助服务」，按系统提示授权。
+需要 **macOS 26 或以上**。到 [GitHub Releases](https://github.com/benphant/wakeup-lite/releases/latest) 下载 DMG，把应用拖进「应用程序」后打开。
 
 菜单栏左键切换、右键打开菜单。关窗口后继续运行，退出应用释放防休眠。应用无需账号，离线运行，恢复记录和诊断日志只保存在本机。合盖运行时请留出散热空间。
 
